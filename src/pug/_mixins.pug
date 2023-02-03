@@ -1,0 +1,37 @@
+mixin sidebar__elem(subtitle, args)
+    .sidebar__elem
+        p.sidebar__subtitle= subtitle
+        ul.sidebar__list
+            for i in args
+                li.sidebar__item=i
+
+mixin course__elem(logo, courseName, education, duration, descr, min, max, start, cost)
+    .course__elem 
+        .course__main-info
+            .course__logo-container 
+                img(src=require("../assets/img/icons/circle.svg")).course__add-mob
+                img(src=logo).course__logo
+            p.course__chapter BUSINESS & MANAGEMENT
+            p.course__course-name=courseName
+            .course__education 
+                img(src=require("../assets/img/icons/black-hat.svg"))
+                p=education  
+            .course__duration
+                img(src=require("../assets/img/icons/bag.svg"))
+                p=duration
+            .course__cost-mob=cost
+            a(href='#').course__btn MORE INFO 
+            .course__hover-info 
+                .course__add
+                    img(src=require("../assets/img/icons/pluse.svg"))
+                p.course__descr=descr
+                .course__duration_wrap 
+                    p.course__duration-info Duration:
+                    p.course__min=min
+                    p.course__max=max
+                .course__start-wrap 
+                    p.course__start-info Start Dates:
+                    p.course__start=start
+                .course__cost=cost
+                a(href='#').course__btn MORE INFO 
+

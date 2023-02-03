@@ -1,0 +1,20 @@
+- var content = [{title: 'Business & Management', elem: ["Child Psychologist", "Behaviour Analyst", "Recreational Therapist"]}, {title: 'Computing & IT', elem: ["Market Research Executive"]}, {title: 'Fashion & Media', elem: ["Market Research Executive", "Child Psychologist"]}, {title: 'Finance & Accounting', elem: [ "Guidance Counsellor", "Behaviour Analyst", "Recreational Therapist"]}, {title: 'Law & Criminology', elem: ["Market Research Executive", "Child Psychologist", "Guidance Counsellor"]}, {title: 'Marketing & Communications', elem: ["Market Research Executive"]}, {title: 'Psychology & Social Sciences', elem: ["Market Research Executive", "Child Psychologist", "Guidance Counsellor", "Behaviour Analyst", "Recreational Therapist"]},]
+ 
+
+.sidebar 
+    .sidebar__mob 
+        img(src=require("../assets/img/icons/green-hat.svg"))
+        p CHOOSE YOUR CAREER
+    .sidebar__title 
+        img(src=require("../assets/img/icons/green-hat.svg"))
+        p CAREERS
+    .sidebar__line
+    .sidebar__content 
+        include _mixins
+        for i in content
+            +sidebar__elem(i.title, i.elem)
+    .sidebar__line
+    a(href="#").sidebar__btn SHOW ALL PROGRAMMES
+                   
+                
+
